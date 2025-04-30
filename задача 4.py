@@ -1,9 +1,9 @@
 f=open('CdSe_CdZnS Core_Shell.txt','r')
-# здесь первый столбик - длина волны, а второй - мощность излучения. Мощность является изучаемой величиной
+# здесь первый столбик - длина волны, а второй - величина, которая от нее зависит
 # код надо запустить в одной папке с этим файлом чтобы программа работала
 s=f.readlines()
 f.close()
-v=[] #здесь хранятся значения мощности
+v=[] #здесь хранятся значения величины
 summ=0
 amount=0
 for line in s:
@@ -21,7 +21,7 @@ for value in v:
     average_square_deviation+=((value-average)**2)/amount
 average_square_deviation=average_square_deviation**0.5
 print("Cреднее отклонение: ",average_deviation, "\nСреднеквадратическое отклонение: ", average_square_deviation)
-print("Cреднее значение мощности: ",average) # если надо
+print("Cреднее значение: ",average) # если надо
 
 
 
